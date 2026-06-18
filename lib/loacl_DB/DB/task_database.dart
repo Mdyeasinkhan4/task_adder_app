@@ -2,7 +2,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
 import 'package:task_adder_app/loacl_DB/model/task_model.dart';
-
 class TaskDatabase {
   static Database ? _db;
   static Future<Database>getDB() async{
@@ -23,10 +22,29 @@ class TaskDatabase {
     db.insert('tasks', task.toMap(), conflictAlgorithm: .replace);
   }
 
-  static Future<List<Task>>getTask(Task task)async {
+  static Future<void>deleteTask(int id)async {
     final db = await getDB();
-    final List<Map<String, dynamic>> maps = await db.query('tasks');
-    return List.generate(maps.length, (i)=>Task.formMap(maps[i]));
+    db.delete('tasks', where: 'id = ?', whereArgs: [id]);
   }
+
+  static Future<void>updateTask(Task task)async {
+    final db = await getDB();
+    db.update('tasks', task.toMap(), where: 'id = ?', whereArgs: [task.id]);
+  }
+
+  static Future<List<Task>> getTask() async {
+  final db = await getDB();
+
+  final List<Map<String, dynamic>> maps =
+      await db.query('tasks');
+
+
+  return List.generate(
+    maps.length,
+    (i) => Task.formMap(maps[i]),
+  );
+}
+
+
 }
 
