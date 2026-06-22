@@ -21,27 +21,20 @@ A simple Flutter Task Management application built with **Sqflite (SQLite)** for
 
 <!-- Add image here -->
 
-![Home Screen](screenshots/home.png)
+![Home Screen](https://github.com/Mdyeasinkhan4/task_adder_app/blob/fc58147dee56f28230070aadac520d59785abc1d/preview_images/Task_adder_1.png)
 
 ### Add Task
 
 <!-- Add image here -->
 
-![Add Task](screenshots/add_task.png)
+![Add Task](https://github.com/Mdyeasinkhan4/task_adder_app/blob/fc58147dee56f28230070aadac520d59785abc1d/preview_images/Task_adder_2.png)
 
 ### Edit Task
 
 <!-- Add image here -->
 
-![Edit Task](screenshots/edit_task.png)
+![Edit Task](https://github.com/Mdyeasinkhan4/task_adder_app/blob/fc58147dee56f28230070aadac520d59785abc1d/preview_images/Task_adder_3.png)
 
-### Task Completed
-
-<!-- Add image here -->
-
-![Task Completed](screenshots/task_completed.png)
-
-> Replace the images above with your actual screenshots.
 
 ---
 
